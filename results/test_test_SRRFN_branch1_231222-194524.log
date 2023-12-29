@@ -1,0 +1,431 @@
+23-12-22 19:45:24.917 - INFO:   name: test_SRRFN_branch1
+  model: sr
+  distortion: sr
+  scale: 2
+  crop_border: None
+  gpu_ids: [0]
+  network_G:[
+    which_model_G: SRRFN
+    scale: 2
+  ]
+  datasets:[
+    test1:[
+      name: set5
+      mode: LQGT
+      dataroot_GT: /home/data/disk2/wsq/Datasets/DIV2K/DIV2K_valid_HR/
+      dataroot_LQ: /home/data/disk2/wsq/Datasets/DIV2K/DIV2K_valid_LR_bicubic/X2/
+      phase: test1
+      scale: 2
+      data_type: img
+    ]
+  ]
+  path:[
+    pretrain_model_G: /home/data/disk3/zl/code/lesrcnn_paddle/trans_weights/trans_SRRFN_x2.pdparams
+    root: /home/data/disk3/zl/code/lesrcnn_paddle
+    results_root: /home/data/disk3/zl/code/lesrcnn_paddle/results/test_SRRFN_branch1
+    log: /home/data/disk3/zl/code/lesrcnn_paddle/results/test_SRRFN_branch1
+  ]
+  is_train: False
+
+23-12-22 19:45:24.918 - INFO: Dataset [LQGTDataset - set5] is created.
+23-12-22 19:45:24.919 - INFO: Number of test images in [set5]: 100
+23-12-22 19:45:25.938 - INFO: Network G structure: SRRFN, with parameters: 4,065,627
+23-12-22 19:45:25.938 - INFO: SRRFN(
+  (sub_mean): MeanShift(3, 3, kernel_size=[1, 1], data_format=NCHW)
+  (add_mean): MeanShift(3, 3, kernel_size=[1, 1], data_format=NCHW)
+  (head): Sequential(
+    (0): Conv2D(3, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+  )
+  (body): Sequential(
+    (0): ResidualGroup(
+      (body): Sequential(
+        (0): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (1): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (2): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (3): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (4): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (5): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (6): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (7): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (8): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (9): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (10): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+      )
+    )
+    (1): ResidualGroup(
+      (body): Sequential(
+        (0): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (1): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (2): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (3): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (4): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (5): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (6): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (7): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (8): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (9): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (10): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+      )
+    )
+    (2): ResidualGroup(
+      (body): Sequential(
+        (0): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (1): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (2): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (3): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (4): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (5): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (6): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (7): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (8): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (9): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (10): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+      )
+    )
+    (3): ResidualGroup(
+      (body): Sequential(
+        (0): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (1): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (2): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (3): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (4): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (5): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (6): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (7): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (8): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (9): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (10): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+      )
+    )
+    (4): ResidualGroup(
+      (body): Sequential(
+        (0): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (1): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (2): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (3): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (4): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (5): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (6): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (7): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (8): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (9): ResidualBlock(
+          (body): Sequential(
+            (0): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+            (1): ReLU(name=True)
+            (2): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+          )
+        )
+        (10): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+      )
+    )
+    (5): Conv2D(64, 64, kernel_size=[3, 3], padding=1, data_format=NCHW)
+  )
+  (tail): Sequential(
+    (0): Upsampler(
+      (0): Conv2D(64, 256, kernel_size=[3, 3], padding=1, data_format=NCHW)
+      (1): PixelShuffle(upscale_factor=2)
+    )
+    (1): Conv2D(64, 3, kernel_size=[3, 3], padding=1, data_format=NCHW)
+  )
+)
+23-12-22 19:45:25.939 - INFO: Loading model for G [/home/data/disk3/zl/code/lesrcnn_paddle/trans_weights/trans_SRRFN_x2.pdparams] ...
+23-12-22 19:45:25.985 - INFO: Model [SRModel] is created.
+23-12-22 19:45:25.985 - INFO: 
+Testing [set5]...
+23-12-22 19:45:35.671 - INFO: 0801                 - PSNR: 4.889866 dB; SSIM: 0.305348; PSNR_Y: 6.228315 dB; SSIM_Y: 0.362332.
+23-12-22 19:45:43.843 - INFO: 0802                 - PSNR: 2.331763 dB; SSIM: 0.265104; PSNR_Y: 4.633721 dB; SSIM_Y: 0.433921.
+23-12-22 19:45:53.385 - INFO: 0803                 - PSNR: 4.776515 dB; SSIM: 0.575292; PSNR_Y: 7.229903 dB; SSIM_Y: 0.700684.
