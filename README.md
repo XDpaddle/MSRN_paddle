@@ -4,7 +4,7 @@ ClassSR: Multi-scale Residual Network for Image Super-Resolution
 
 [Paper]([Multi-scale Residual Network for Image Super-Resolution (thecvf.com)](https://openaccess.thecvf.com/content_ECCV_2018/papers/Juncheng_Li_Multi-scale_Residual_Network_ECCV_2018_paper.pdf))
 
-pytorch版本：[MIVRC/MSRN-PyTorch: This repository is a PyTorch version of the paper "Multi-scale Residual Network for Image Super-Resolution" (ECCV 2018). (github.com)](https://github.com/MIVRC/MSRN-PyTorch?tab=readme-ov-file)
+
 
 Paddle 复现版本
 
