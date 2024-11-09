@@ -8,6 +8,12 @@ ClassSR: Multi-scale Residual Network for Image Super-Resolution
 
 Paddle 复现版本
 
+## 数据集
+DIV2K
+https://data.vision.ee.ethz.ch/cvl/DIV2K/
+Set5
+https://drive.google.com/drive/folders/1pRmhEmmY-tPF7uH8DuVthfHoApZWJ1QU
+
 
 ## 训练模型
 
