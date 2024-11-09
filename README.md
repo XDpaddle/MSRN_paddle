@@ -10,7 +10,8 @@ Paddle 复现版本
 
 
 ## 训练模型
-链接：链接：https://pan.baidu.com/s/1-0EU167AQYauOnPAzCOoZA 
+
+X2,X3,X4模型链接：链接：https://pan.baidu.com/s/1-0EU167AQYauOnPAzCOoZA 
 提取码：MSRN 
 
 ## 训练步骤
